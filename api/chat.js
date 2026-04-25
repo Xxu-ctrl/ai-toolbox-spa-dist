@@ -1,4 +1,3 @@
-// api/chat.js
 export default async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
@@ -19,14 +18,14 @@ export default async function handler(req, res) {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': 'sk-cb3174ec7afc446298eca23896e55ee2'
+        'Authorization': 'sk-1e5744ede4d7433892227d3de6a7888c'
       },
       body: JSON.stringify({
         model: 'qwen-turbo',
         messages: body.messages,
         temperature: 0.1,
         max_tokens: 500,
-        stream: body.stream || false
+        stream: false
       })
     });
 
